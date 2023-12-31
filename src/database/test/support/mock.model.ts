@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 export abstract class MockModel<T> {
   protected abstract entityStub: T;
 
