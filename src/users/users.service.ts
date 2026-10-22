@@ -30,7 +30,7 @@ export class UsersService {
     return this.usersRepository.findOneAndUpdate({ userId }, userData);
   }
 
-  async deleteUser(userId: string) {
-    return this.usersRepository.delete({ userId });
+  async deleteUser(userId: string): Promise<boolean> {
+    return this.usersRepository.deleteMany({ userId });
   }
 }
